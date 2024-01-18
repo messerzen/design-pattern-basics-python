@@ -17,7 +17,7 @@ def make_blink(function):
     return decorator
 
 # We apply the decorator here
-
+@make_blink
 def hello_world():
     "Original function"
 
@@ -32,3 +32,6 @@ if __name__ == "__main__":
 
     print(hello_world())
     print(hello_world2())
+
+    print(hello_world.__name__)
+    print(hello_world.__doc__)
